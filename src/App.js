@@ -5,10 +5,6 @@ import {
   NavLink
 } from 'react-router-dom';
 import Colours from './components/Colours';
-import asAsyncComponent from './utils/asAsyncComponent';
-
-const AsyncHome = asAsyncComponent(() => import(/* webpackChunkName: 'home' */ './components/Home'));
-const AsyncAbout = asAsyncComponent(() => import(/* webpackChunkName: 'about' */ './components/About'));
 
 const App = () => (
   <div className="app">
@@ -21,8 +17,6 @@ const App = () => (
     <div className="main">
       <Switch>
         <Route path="/colours/:colour" component={Colours} />
-        <Route exact path="/" component={AsyncHome} />
-        <Route path="/about" component={AsyncAbout} />
       </Switch>
     </div>
 
