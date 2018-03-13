@@ -6,7 +6,6 @@ const Coloured = styled.div`
 `;
 
 const Colours = ({ match: { params: { colour }}}) => {
-    console.log(colour);
     return <Coloured colour={colour}>test</Coloured>;
 }
 
