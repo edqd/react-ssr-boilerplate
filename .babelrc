@@ -4,5 +4,9 @@
     "react",
     "stage-0"
   ],
-  "plugins": []
+  "plugins": [
+    ["babel-plugin-styled-components", {
+      "ssr": true
+    }]
+  ]
 }
